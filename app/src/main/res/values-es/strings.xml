@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Miwok</string>
+    <string name="category_colors">Colores</string>
+    <string name="category_family">Familiares</string>
+    <string name="category_numbers">Números</string>
+    <string name="category_phrases">Frases</string>
+
+    <!--Colors-->
+
+    <string-array name="ColorDefault">
+        <item>Rojo</item>
+        <item>Amarillo mostaza</item>
+        <item>Amarillo pálido</item>
+        <item>Verde</item>
+        <item>Marrón</item>
+        <item>Gris</item>
+        <item>Negro</item>
+        <item>Blanco</item>
+    </string-array>
+
+    <string-array name="FamilyDefault">
+
+        <item>Padre</item>
+        <item>Madre</item>
+        <item>Hijo</item>
+        <item>Hija</item>
+        <item>Hermano mayor</item>
+        <item>Hermano pequeño</item>
+        <item>Hermana mayor</item>
+        <item>Hermana pequeña</item>
+        <item>Abuela</item>
+        <item>Abuelo</item>
+
+    </string-array>
+
+    <string-array name="NumbersDefault">
+
+        <item>Uno</item>
+        <item>Dos</item>
+        <item>Tres</item>
+        <item>Cuatro</item>
+        <item>Cinco</item>
+        <item>Seis</item>
+        <item>Siete</item>
+        <item>Ocho</item>
+        <item>Nueve</item>
+        <item>Diez</item>
+
+    </string-array>
+
+    <string-array name="PhrasesDefault">
+
+        <item>¿Dónde vas?</item>
+        <item>¿Cómo te llamas?</item>
+        <item>Me llamo...</item>
+        <item>¿Cómo te sientes?</item>
+        <item>Me siento bien</item>
+        <item>¿Vienes?</item>
+        <item>Sí, voy</item>
+        <item>Voy</item>
+        <item>Vamos</item>
+        <item>Ven aquí</item>
+
+    </string-array>
+</resources>
