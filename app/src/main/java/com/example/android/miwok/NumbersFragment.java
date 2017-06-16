@@ -2,6 +2,7 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,10 +56,11 @@ public class NumbersFragment extends Fragment {
 
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
+        //To set the background color in the listview
+        listView.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.category_numbers));
+
         listView.setAdapter(adapter);
 
-
-        // Inflate the layout for this fragment
         return rootView;
 
     }

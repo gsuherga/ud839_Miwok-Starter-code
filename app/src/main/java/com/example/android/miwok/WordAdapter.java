@@ -78,6 +78,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
+
         final Word currentword = (Word) getItem(position);
 
      /*
@@ -104,21 +105,19 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageResource.setVisibility(View.GONE);
         }
 
-        //Find the listView bu its ID.
+        //To change the background color of the ImageResource
 
-        View text = listItemView.findViewById(R.id.BackGroundColorTextViews);
-        // Find the color that the resource ID
-        int color = ContextCompat.getColor(getContext(), mcolorResource);
-        // Set the background color of the text
-        text.setBackgroundColor(color);
+        ImageView ImageResource = (ImageView) listItemView.findViewById(R.id.ImageResource);
+        ImageResource.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.tan_background));
 
-        // Find the sound to play
 
-        final int soundResourseID = currentword.getSoundResourseID();
+        //Find the listView by its ID.
 
         // To create the Mediaplayer so we can play the sound.
 
         // to play the sound when clicking on the textview
+
+        View text = listItemView.findViewById(R.id.BackGroundColorTextViews);
 
         text.setOnClickListener(new TextView.OnClickListener() {
 
@@ -146,12 +145,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
                     // We have audio focus now.
                     //Create the meadiaplayer
-                    mp = MediaPlayer.create(getContext(), soundResourseID);
+                    mp = MediaPlayer.create(getContext(), currentword.getSoundResourseID());
 
                     // Start the audio file
                     mp.start();
                     //Toast messsage with the miwok word
-                    Toast.makeText(getContext(), currentword.getMiwokTranslation(), Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getContext(), currentword.getMiwokTranslation(), Toast.LENGTH_SHORT).show();
                     // Setup a listener on the media player, so that we can stop and release the
                     // media player once the sound has finished playing.
                     mp.setOnCompletionListener(mCompletionListener);
@@ -191,6 +190,4 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
     }
-
-
 }
